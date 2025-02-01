@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A Love Letter</title>
+    <link rel="stylesheet" href="html.css">
+    <style>
+        body {
+            font-family: 'Georgia', serif;
+            background-color: #f9f9f9;
+            color: #333;
+            margin: 0;
+            padding: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+        .letter {
+            max-width: 600px;
+            margin: auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 1;
+        }
+        h1 {
+            text-align: center;
+            color: #e63946;
+        }
+        p {
+            line-height: 1.6;
+        }
+        .signature {
+            margin-top: 40px;
+            text-align: right;
+            font-style: italic;
+        }
+        .heart {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background-color: red;
+            clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+            animation: pop 1s forwards;
+            opacity: 0;
+        }
+        @keyframes pop {
+            0% {
+                transform: scale(0);
+                opacity: 1;
+            }
+            50% {
+                transform: scale(1.5);
+            }
+            100% {
+                transform: scale(0);
+                opacity: 0;
+            }
+        }
+        .flower {
+            font-size: 50px; /* Adjust size as needed */
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        button {
+        background-color: #000;
+        border: .5px solid crimson;
+        border-radius: 10px;
+        color: #fff;
+        padding: 8px;
+      }
+    </style>
+</head>
+<body>
+  
+
+<div class="letter">
+    <h1>My Dearest Love,</h1>
+    <div class="flower">🌸</div> <!-- Flower emoji -->
+    <p>
+        As I sit here, my heart swells with love for you. You are the light in my life, the one who makes everything better. Just like the hearts that pop up around us, my love for you is vibrant and full of joy.
+    </p>
+    <p>
+        Every moment spent with you is a treasure, and I cherish the laughter, the adventures, and the quiet moments we share. You make my heart sing, and I am so grateful for your love.
+    </p>
+    <p>
+        Thank you for being you, for loving me, and for allowing me to love you. You are my heart, my soul, and my everything.
+    </p>
+    <p>
+       Hindi ko na alam ano pa maidadagdag ko sa mga sinabi ko sayo Happy Birthday Bell Mahal na mahal kita sana wag ka magsawa pa saken kupallllllll taray mo hahahahahahaha I love you.
+    </p>
+    <div class="signature">
+        [Jewel alcantara] 
+    </div>
+    <a href="index1.html"><button>Next Page</button></a>
+
+
+    
+
+
+</div>
+
+<audio controls autoplay>
+    <source src="https://cdn.commoninja.com/asset/046bb29b-db2b-4776-aa28-d68bb6eb5b0a.mp3" type="audio/ogg">
+    <source src="https://cdn.commoninja.com/asset/046bb29b-db2b-4776-aa28-d68bb6eb5b0a.mp3"
+            type="audio/mpeg">
+</audio>
+
+
+
+
+
+<div id="hearts"></div>
+
+
+<script>
+    function createHeart() {
+        const heart = document.createElement('div');
+        heart.className = 'heart';
+        heart.style.left = Math.random() * 100 + 'vw'; // Random horizontal position
+        heart.style.bottom = '0'; // Start from the bottom
+        document.getElementById('hearts').appendChild(heart);
+
+        // Remove heart after animation
+        heart.addEventListener('animationend', () => {
+            heart.remove();
+        });
+
+        // Trigger the animation
+        setTimeout(() => {
+            heart.style.animation = 'pop 1s forwards';
+            heart.style.bottom = Math.random() * 100 + 50 + 'vh'; // Random vertical position
+        }, 10);
+    }
+
+    // Create hearts at intervals
+    setInterval(createHeart, 300); // Adjust the interval for more or fewer hearts
+</script>
+
+</body>
+
+
+</html>
